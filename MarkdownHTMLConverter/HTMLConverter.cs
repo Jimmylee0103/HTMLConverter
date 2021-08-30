@@ -47,8 +47,11 @@ namespace MarkdownHTMLConverter
                 }
             }
 
-            Process.Start("notepad.exe", @"convertedHTML.txt");
-               
+            //Uncomment below line for running in Windows to automatically open the text file
+            //Process.Start("notepad.exe", @"convertedHTML.txt");
+
+            Console.WriteLine("Open the output file in /HTMLConverter/MarkdownHTMLConverter/bin/Debug/netcoreapp3.1/convertedHTML.txt to view the converted Markdown to HTML text");
+
             return;
         }
 
