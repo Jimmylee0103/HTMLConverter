@@ -3,7 +3,3 @@
 Hello!
 
 This is sample markdown for the [Mailchimp](https://www.mailchimp.com) homework assignment.
-
-# Header one
-
-Hello there
