@@ -5,19 +5,21 @@ namespace UnitTests
 {
     public class UnitTest1
     {
-        [Fact]
-        public void HeadingConverter_Test()
+        [Theory]
+        [InlineData("# Heading 1", "<h1>Heading 1</h1>")]
+        [InlineData("## Heading 2", "<h2>Heading 2</h2>")]
+        [InlineData("### Heading 3", "<h3>Heading 3</h3>")]
+        [InlineData("#### Heading 4", "<h4>Heading 4</h4>")]
+        [InlineData("##### Heading 5", "<h5>Heading 5</h5>")]
+        [InlineData("###### Heading 6", "<h6>Heading 6</h6>")]
+        public void HeadingConverter_Test(string testData, string expected)
         {
-            // Arrange
-            var testData = "###### Heading 6";
-
             // Act
             var result = HTMLConverter.HeadingConverter(testData);
 
 
             // Assert
-
-            Assert.Equal("<h6>Heading 6</h6>", result);
+            Assert.Equal(expected, result);
         }
 
         [Fact]
